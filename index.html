@@ -7,7 +7,6 @@
   <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
 <title>Australia LMI Calculator — Tabutility</title>
 <meta name="description" content="Free Australian LMI calculator. Estimate your Lenders Mortgage Insurance premium based on property value, loan amount and LMI rates."/>
 <meta name="keywords" content="lmi calculator australia, lenders mortgage insurance, lmi premium, australia mortgage insurance, lmi cost calculator"/>
@@ -31,30 +30,30 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is LMI?","acceptedAnswer":{"@type":"Answer","text":"Lenders Mortgage Insurance protects the lender (not you) if you default. It's usually required when borrowing more than 80% of the property value."}},{"@type":"Question","name":"Is this estimate accurate?","acceptedAnswer":{"@type":"Answer","text":"It's an approximation — actual LMI premiums vary by lender and insurer."}},{"@type":"Question","name":"Is the LMI Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"How do I avoid LMI?","acceptedAnswer":{"@type":"Answer","text":"Save a 20% deposit, use a guarantor, or check eligibility for the First Home Guarantee scheme."}}]}</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f7f4;color:#0f172a;min-height:100vh}
-nav{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display:flex;align-items:center;gap:16px}
-nav a{color:#64748b;text-decoration:none;font-size:14px}nav a:hover{color:#0f172a}
-nav .brand{color:#0f172a;font-weight:700;font-size:18px}
-.ad-banner{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:4px;text-align:center}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}nav a:hover{color:#f1f5f9}
+nav .brand{color:#4f46e5;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
 #app{max-width:700px;margin:8px auto;padding:0 16px 40px}
 h1{font-size:26px;font-weight:800;margin:24px 0 4px;text-align:center}
-.subtitle{color:#64748b;text-align:center;font-size:14px;margin-bottom:24px}
-.card{background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:24px;margin-bottom:16px}
+.subtitle{color:#94a3b8;text-align:center;font-size:14px;margin-bottom:24px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:16px}
 .form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
-.form-group input{width:100%;background:#f8f7f4;border:1px solid #e2e8f0;color:#0f172a;padding:12px 16px;border-radius:8px;font-size:18px;font-weight:600}
-.form-group input:focus{outline:none;border-color:#0f172a}
+.form-group label{display:block;font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.form-group input{width:100%;background:#0f172a;border:1px solid #334155;color:#f1f5f9;padding:12px 16px;border-radius:8px;font-size:18px;font-weight:600}
+.form-group input:focus{outline:none;border-color:#4f46e5}
 .hint{font-size:12px;color:#64748b;margin-top:4px}
-.calc-btn{width:100%;padding:14px;background:#0f172a;color:#f8f7f4;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s}
-.calc-btn:hover{background:#334155}
+.calc-btn{width:100%;padding:14px;background:#4f46e5;color:#0f172a;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;transition:background .2s}
+.calc-btn:hover{background:#4338ca}
 .results{display:none}
 .ltv-bar-wrap{margin:16px 0}
-.ltv-bar-bg{background:#f8f7f4;border-radius:20px;height:20px;overflow:hidden;border:1px solid #e2e8f0}
+.ltv-bar-bg{background:#0f172a;border-radius:20px;height:20px;overflow:hidden;border:1px solid #334155}
 .ltv-bar-fill{height:100%;border-radius:20px;transition:width .4s;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:11px;font-weight:700;color:#fff}
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
-.result-card{background:#f8f7f4;border:1px solid #e2e8f0;border-radius:10px;padding:16px;text-align:center}
-.result-card .rv{font-size:22px;font-weight:800;color:#0f172a}
-.result-card .rl{font-size:12px;color:#64748b;margin-top:4px}
+.result-card{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:16px;text-align:center}
+.result-card .rv{font-size:22px;font-weight:800;color:#4f46e5}
+.result-card .rl{font-size:12px;color:#94a3b8;margin-top:4px}
 .result-card.warn .rv{color:#f59e0b}
 .result-card.ok .rv{color:#22c55e}
 .info-box{border-radius:10px;padding:14px 16px;font-size:13px;margin-top:12px;line-height:1.6}
@@ -62,25 +61,26 @@ h1{font-size:26px;font-weight:800;margin:24px 0 4px;text-align:center}
 .info-box.amber{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:#fcd34d}
 .info-box.red{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#fca5a5}
 .lmi-table{width:100%;border-collapse:collapse;font-size:13px}
-.lmi-table th{background:#f8f7f4;color:#64748b;text-align:left;padding:10px 12px;font-size:11px;text-transform:uppercase}
+.lmi-table th{background:#0f172a;color:#94a3b8;text-align:left;padding:10px 12px;font-size:11px;text-transform:uppercase}
 .lmi-table td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,0.06)}
 .lmi-table tr:last-child td{border-bottom:none}
-.lmi-table tr.active-row td{background:rgba(56,189,248,0.08);color:#0f172a;font-weight:700}
+.lmi-table tr.active-row td{background:rgba(56,189,248,0.08);color:#4f46e5;font-weight:700}
 .fhg-note{background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);border-radius:10px;padding:14px 16px;font-size:13px;color:#c4b5fd;margin-top:12px;line-height:1.6}
 </style>
   <meta name="theme-color" content="#1a1a2e" />
-  <style id="tabutility-brand">
-/* empty ad slots: reserve space, no bordered box */
-.ad-banner,.ad-slot,.ad-container{background:transparent!important;border:none!important;border-bottom:none!important;box-shadow:none!important}
+  <style id="tabutility-brand-v2">
+/* Canonical dark-surface spec (STYLE.md): indigo accent, white text on indigo */
+.btn,.toggle-btn.active,button.active{color:#fff!important}
+nav .brand{color:#fff}
+nav a:hover{color:#818cf8}
+input:focus,select:focus,textarea:focus{border-color:#818cf8!important}
 /* AdSense not yet approved: hide all ad frames (container min-height still reserves space). Remove these two lines after approval. */
 ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibility:hidden!important}
-nav .brand{color:#0f172a}
-body{-webkit-font-smoothing:antialiased}
 </style>
 </head>
 <body>
 <nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
-<div class="hub-link" style="max-width:900px;margin:12px auto 0;padding:0 16px"><a href="https://tabutility.com/australia-tax/" style="color:#0f172a;text-decoration:none;font-size:14px">← All Australia Tax Calculators</a></div>
+<div class="hub-link" style="max-width:900px;margin:12px auto 0;padding:0 16px"><a href="https://tabutility.com/australia-tax/" style="color:#4f46e5;text-decoration:none;font-size:14px">← All Australia Tax Calculators</a></div>
 <div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div id="app">
   <h1>🏠 Australia LMI Calculator</h1>
@@ -101,8 +101,8 @@ body{-webkit-font-smoothing:antialiased}
 
   <div class="results" id="results">
     <div class="card">
-      <div style="font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px">Loan-to-Value Ratio (LVR)</div>
-      <div style="font-size:32px;font-weight:800;color:#0f172a;margin-bottom:8px" id="ltvDisplay">—%</div>
+      <div style="font-size:13px;font-weight:600;color:#94a3b8;margin-bottom:6px">Loan-to-Value Ratio (LVR)</div>
+      <div style="font-size:32px;font-weight:800;color:#f1f5f9;margin-bottom:8px" id="ltvDisplay">—%</div>
       <div class="ltv-bar-wrap">
         <div class="ltv-bar-bg">
           <div class="ltv-bar-fill" id="ltvBar" style="width:0%">—</div>
@@ -135,7 +135,7 @@ body{-webkit-font-smoothing:antialiased}
   </div>
 
   <div class="card">
-    <div style="font-size:13px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Approximate LMI Rate Table</div>
+    <div style="font-size:13px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Approximate LMI Rate Table</div>
     <table class="lmi-table" id="lmiTable">
       <thead><tr><th>LVR Range</th><th>Approx. LMI Rate</th><th>On A$600k Loan</th></tr></thead>
       <tbody>
@@ -155,40 +155,40 @@ body{-webkit-font-smoothing:antialiased}
     
 
 <!-- embed-widget -->
-<div style="max-width:640px;margin:0 auto 32px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px">
-  <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
+<div style="max-width:640px;margin:0 auto 32px;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px">
+  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
   <p style="font-size:13px;color:#64748b;margin-bottom:12px">Add this Australia LMI Calculator to your website or blog for free — just paste this code:</p>
-  <div style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:'Inter',monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://australia-lmi-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Australia LMI Calculator by Tabutility&quot;&gt;&lt;/iframe&gt;
+  <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#818cf8;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://australia-lmi-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;Australia LMI Calculator by Tabutility&quot;&gt;&lt;/iframe&gt;
 &lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;https://australia-lmi-calculator.tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Australia LMI Calculator&lt;/a&gt; by &lt;a href=&quot;https://tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tabutility&lt;/a&gt;&lt;/p&gt;</div>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#4f46e5;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
   <span style="font-size:11px;color:#475569;margin-left:12px">Free to use — the credit link helps others find the tool</span>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;border:1px solid #e2e8f0"><span style="font-size:24px">💸</span><div><strong style="color:#e2e8f0">Sending money abroad?</strong><br><span style="color:#64748b;font-size:14px">Wise gives you the real exchange rate with low, transparent fees. </span><a href="https://wise.prf.hn/click/camref:1100l5Q6iH/pubref:australia-lmi-calculator" target="_blank" rel="sponsored noopener" style="color:#0f172a;font-weight:700">Try Wise →</a></div></div>
-<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://www.amazon.co.uk/s?k=Australian%20property%20buying%20first%20home%20books&tag=tabutility-20','_blank','noopener noreferrer')" title="Buying your first home in Australia?">
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;border:1px solid #334155"><span style="font-size:24px">💸</span><div><strong style="color:#e2e8f0">Sending money abroad?</strong><br><span style="color:#94a3b8;font-size:14px">Wise gives you the real exchange rate with low, transparent fees. </span><a href="https://wise.prf.hn/click/camref:1100l5Q6iH/pubref:australia-lmi-calculator" target="_blank" rel="sponsored noopener" style="color:#4f46e5;font-weight:700">Try Wise →</a></div></div>
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.co.uk/s?k=Australian%20property%20buying%20first%20home%20books&tag=tabutility-20','_blank','noopener noreferrer')" title="Buying your first home in Australia?">
   <span style="font-size:28px;flex-shrink:0">📚</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Buying your first home in Australia?</div>
-    <div style="font-size:12px;color:#64748b">Browse Australian property books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Buying your first home in Australia?</div>
+    <div style="font-size:12px;color:#94a3b8">Browse Australian property books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
   </div>
 </div>
-<h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-      <a href="https://australian-tax-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Australian Tax Calculator</div>
-        <div style="font-size:11px;color:#64748b;margin-top:2px">International</div>
+      <a href="https://australian-tax-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Australian Tax Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
       </a>
-      <a href="https://australia-stamp-duty.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Stamp Duty Calculator</div>
-        <div style="font-size:11px;color:#64748b;margin-top:2px">International</div>
+      <a href="https://australia-stamp-duty.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Stamp Duty Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
       </a>
-      <a href="https://mortgage-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">Mortgage Calculator</div>
-        <div style="font-size:11px;color:#64748b;margin-top:2px">Finance</div>
+      <a href="https://mortgage-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Mortgage Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Finance</div>
       </a>
-      <a href="https://australia-hecs-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#0f172a">HECS / HELP Calculator</div>
-        <div style="font-size:11px;color:#64748b;margin-top:2px">International</div>
+      <a href="https://australia-hecs-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">HECS / HELP Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">International</div>
       </a>
     </div>
   </div>
@@ -196,22 +196,22 @@ body{-webkit-font-smoothing:antialiased}
 
 <div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
   <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
-    <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">What is LMI?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">Lenders Mortgage Insurance protects the lender (not you) if you default on your loan. It's usually required when borrowing more than 80% of the property value.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What is LMI?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Lenders Mortgage Insurance protects the lender (not you) if you default on your loan. It's usually required when borrowing more than 80% of the property value.</div>
     </div>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Is this estimate accurate?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">It's an approximation — actual LMI premiums vary by lender, insurer (Helia/QBE), loan type and state stamp duty on the LMI premium.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this estimate accurate?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">It's an approximation — actual LMI premiums vary by lender, insurer (Helia/QBE), loan type and state stamp duty on the LMI premium.</div>
     </div>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Is this free?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
     </div>
     <div style="padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">How do I avoid LMI?</div>
-      <div style="font-size:13px;color:#64748b;line-height:1.5">Save a 20% deposit, use a guarantor, or check eligibility for the First Home Guarantee scheme which allows eligible buyers to borrow up to 95% with no LMI.</div>
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">How do I avoid LMI?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Save a 20% deposit, use a guarantor, or check eligibility for the First Home Guarantee scheme which allows eligible buyers to borrow up to 95% with no LMI.</div>
     </div>
   </div>
 </div>
@@ -306,11 +306,11 @@ function calculate() {
   }
 })();
 </script>
-<footer style="border-top:1px solid #e2e8f0;background:#ffffff;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;color:#64748b;line-height:1.8">
-<div style="font-weight:700;color:#0f172a;font-size:15px">⚡ Tabutility</div>
+<footer style="background:#1a1a2e;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:13px;color:#94a3b8;line-height:1.8">
+<div style="font-weight:700;color:#fff;font-size:15px">⚡ Tabutility</div>
 <div>Free, private, browser-based tools. No sign-up, no tracking.</div>
-<div><a href="https://tabutility.com" style="color:#0f172a;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#64748b;text-decoration:none">Blog</a> · <a href="https://tabutility.com/#about" style="color:#64748b;text-decoration:none">About</a></div>
-<div style="margin-top:6px;color:#94a3b8">© 2026 Tabutility</div>
+<div><a href="https://tabutility.com" style="color:#818cf8;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#94a3b8;text-decoration:none">Blog</a> · <a href="https://tabutility.com/#about" style="color:#94a3b8;text-decoration:none">About</a></div>
+<div style="margin-top:6px;color:#64748b">© 2026 Tabutility</div>
 </footer>
 </body>
 </html>
